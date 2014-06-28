@@ -1,0 +1,10 @@
+<h1>Photos</h1>
+<% @photos.each do |photo| %>
+<img src='<%= photo.url %>' />
+<br />
+<% end %>
+
+<%= form_for Photo.new do |f| %>
+<%= f.url_field :url %>
+<%= f.submit %>
+<% end %>
